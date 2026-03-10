@@ -45,7 +45,10 @@
         function box() {
             const $p = document.querySelectorAll("#box")
         
-        $p.forEach(p => p.style.backgroundColor = "beige")
+        $p.forEach((p, idx) => {
+            p.style.backgroundColor = "beige";
+            p.innerText = "선택된 문단" + (idx + 1);
+        })
         }
 
         function blue() {
