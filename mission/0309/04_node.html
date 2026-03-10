@@ -43,8 +43,11 @@
             const target = document.querySelector(".last");
 
             target.insertAdjacentHTML(
-                '<div class="new">HTML 요소로 교체됨</div>'
+                "beforebegin",
+                '<div class="new"><b>HTML 요소로 교체됨</b></div>'
             );
+
+            target.remove();
         }
     </script>
 
