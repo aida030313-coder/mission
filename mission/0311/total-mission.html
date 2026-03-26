@@ -14,6 +14,10 @@
             background: deepskyblue;
             border: none;
         }
+
+        input {
+            height: 20px;
+        }
     </style>
 
     <h1>사용자 입력 양식 이벤트 연습하기</h1>
@@ -40,11 +44,11 @@
         <br><br>
 
         <label>참여 일자 선택</label><br>
-                <select name="date">
-                    <option value="cal" selected> -- 날짜 선택 -- </option>
-                    <option value="ele"> 2026년 3월 11일</option>
-                    <option value="twe"> 2026년 3월 12일</option>
-                    <option value="thir"> 2026년 3월 13일</option>
+                <select name="date" required>
+                    <option value=""> -- 날짜 선택 -- </option>
+                    <option value="11"> 2026년 3월 11일</option>
+                    <option value="12"> 2026년 3월 12일</option>
+                    <option value="13"> 2026년 3월 13일</option>
                 </select>
 
         <br><br>
@@ -55,7 +59,7 @@
         <br>
 
         <label>
-            <input type="checkbox"><b>개인정보 수집에 동의합니다. </b>
+            <input type="checkbox" required><b>개인정보 수집에 동의합니다. </b>
         </label>
 
         <br><br>
