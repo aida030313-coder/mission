@@ -55,9 +55,9 @@
 
         let rgb = '';
 
-        if (color == 'r') rgb = 'red';
-        else if (color == 'g') rgb = 'green';
-        else if (color == 'b') rgb = 'blue';
+        if (color === 'r') rgb = 'red';
+        else if (color === 'g') rgb = 'green';
+        else if (color === 'b') rgb = 'blue';
 
         const style = {
             background: rgb,
@@ -65,7 +65,7 @@
             height: 100
         }
 
-        const num5 = <div style={style}>BackGround Color</div>
+        const num5 = <div style={style}></div>
     
         root1.render(
             <>
