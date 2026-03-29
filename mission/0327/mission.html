@@ -38,12 +38,31 @@
         }
 
         // 각 미션에 해당하는 컴포넌트들 만들어보기
-        const Person = (friend) => {
-            return (
-                <h3>이름: {name} / 나이: {age} </h3>
-            )
+        
+        const ColorBox = ({color}) => {
+            const style = {
+                width: '100px',
+                height: '100px',
+                backgroundColor: color
+            };
+            return <div style={style}></div>
         }
 
+        const Items = ({data}) => {
+            return <ul> {
+                data.map((item, index) => 
+                <li key={index}>{item}</li>)
+            } </ul>;
+        }
+
+        const Person = ({friend}) => {
+            return <h3> 이름: {friend.name}, 나이: {friend.age} </h3>;
+        }
+
+        const Square = ({children}) => {
+            const quarter = Number(children);
+            return <h3> 넓이: {quarter ** 2}</h3>
+        }
 
         ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
