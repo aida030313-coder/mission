@@ -10,6 +10,7 @@ function Counter() {
 
     const handleDecrease = () => {
         setNumber((prev) => prev - 1);
+        // setNumber(number - 1);
     }
 
     const reset = () => {

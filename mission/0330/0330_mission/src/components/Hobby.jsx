@@ -15,7 +15,7 @@ function Hobby() {
                 type='checkbox'
                 id='reading'
                 checked={read}
-                onChange={(e) => setRead(e.target.value)}
+                onChange={(e) => setRead(e.target.checked)}
             />
             <label htmlFor='reading'>📚독서</label> <br/>
 
@@ -23,7 +23,7 @@ function Hobby() {
                 type='checkbox'
                 id='music'
                 checked={mu}
-                onChange={(e) => setMu(e.target.value)}
+                onChange={(e) => setMu(e.target.checked)}
             />
             <label htmlFor='music'>🎵음악</label> <br/>
 
@@ -31,7 +31,7 @@ function Hobby() {
                 type='checkbox'
                 id='sports'
                 checked={sport}
-                onChange={(e) => setSport(e.target.value)}
+                onChange={(e) => setSport(e.target.checked)}
             />
             <label htmlFor='sports'>🤼운동</label> <br/>
 
@@ -39,7 +39,7 @@ function Hobby() {
                 type='checkbox'
                 id='coding'
                 checked={code}
-                onChange={(e) => setCode(e.target.value)}
+                onChange={(e) => setCode(e.target.checked)}
             />
             <label htmlFor='coding'>💻코딩</label>
             

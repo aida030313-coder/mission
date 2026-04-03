@@ -19,10 +19,10 @@ function Favorite() {
                     value={color}
                     onChange={handleColorChange}
                 >
-                    <option>파란색</option>
-                    <option>빨간색</option>
-                    <option>초록색</option>
-                    <option>노란색</option>
+                    <option value="blue">파란색</option>
+                    <option value="red">빨간색</option>
+                    <option value="green">초록색</option>
+                    <option value="yellow">노란색</option>
                 </select>
             </h4>
 
@@ -31,10 +31,10 @@ function Favorite() {
                     value={fruit}
                     onChange={handleFruitChange}
                 >
-                    <option>🍎사과</option>
-                    <option>🍌바나나</option>
-                    <option>🍊오렌지</option>
-                    <option>🍇포도</option>
+                    <option value="apple">🍎사과</option>
+                    <option value="banana">🍌바나나</option>
+                    <option value="orange">🍊오렌지</option>
+                    <option value="grape">🍇포도</option>
                 </select>
             </h4>
 
