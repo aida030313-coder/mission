@@ -2,37 +2,32 @@ import React, { useState } from 'react'
 
 function num3_Item() {
 
-    const [fruit1, SetFruit1] = useState(false);
-    const [fruit2, SetFruit2] = useState(false);
-    const [fruit3, SetFruit3] = useState(false);
-    const [fruit4, SetFruit4] = useState(false);
-    const [fruit5, SetFruit5] = useState(false);
+    const [selectFruit, setSelectFruit] = useState('');
 
-    const handleApple = () => SetFruit1(!fruit1);
-    const handleBanana = () => SetFruit2(!fruit2);
-    const handleOrange = () => SetFruit3(!fruit3);
-    const handleGrape = () => SetFruit4(!fruit4);
-    const handleStraw = () => SetFruit5(!fruit5);
-
+    const fruits = ['사과', '바나나', '오렌지', '포도', '딸기'];
 
     return (
-        <div>
+        <>
             <h2>아이템 선택</h2>
-            <button onClick={handleApple}>사과</button>
-            <button onClick={handleBanana}>바나나</button>
-            <button onClick={handleOrange}>오렌지</button>
-            <button onClick={handleGrape}>포도</button>
-            <button onClick={handleStraw}>딸기</button>
+            <div>
+                {fruits.map((fruit) => (
+                    <button
+                        key={fruit}
+                        onClick={() => setSelectFruit(fruit)}
+                    >
+                        {fruit}
+                    </button>
+                ))}
+            </div>
 
-            <p>
-                선택된 과일: 
-                {fruit1 ? "사과 " : ""}
-                {fruit2 ? "바나나 " : ""}
-                {fruit3 ? "오렌지 " : ""}
-                {fruit4 ? "포도 " : ""}
-                {fruit5 ? "딸기 " : ""}
-                </p>
-        </div>
+            <div>
+                선택된 과일: {selectFruit || '없음'}
+            </div>
+
+            {selectFruit && (
+                <div>🎉 {selectFruit}를 선택하셨습니다! </div>
+            )}
+        </>
     )
 }
 
